@@ -4,27 +4,6 @@
 
 1. **Colab은 임시 VM**이라서 런타임이 종료되면 서버/데이터가 초기화됩니다.
 
-1.txt
-8KB
-유지현 — 오후 2:17
-https://github.com/albertjihyun/lab1.git
-GitHub
-GitHub - albertjihyun/lab1
-Contribute to albertjihyun/lab1 development by creating an account on GitHub.
-GitHub - albertjihyun/lab1
-정성모 — 오후 2:17
-https://github.com/HolyMo-J/lab1
-GitHub
-GitHub - HolyMo-J/lab1
-Contribute to HolyMo-J/lab1 development by creating an account on GitHub.
-Contribute to HolyMo-J/lab1 development by creating an account on GitHub.
-﻿
-# Maria database 설치 및 SQL 연습
-
-## 0. 전제: Colab에서 MariaDB를 쓸 때 반드시 알아야 할 점
-
-1. **Colab은 임시 VM**이라서 런타임이 종료되면 서버/데이터가 초기화됩니다.
-
    * 즉, MariaDB도 “설치”는 가능하지만 세션이 끝나면 다시 설치/실행해야 합니다.
 2. MariaDB는 **서버 프로세스(mariadbd)** 가 떠 있어야 접속이 됩니다.
 3. Colab은 기본적으로 **root 계정이 비밀번호 없이 로컬 접속**되도록 설정되는 경우가 많습니다(패키지 기본 설정).
@@ -198,7 +177,7 @@ DROP USER 'username'@'localhost';
 
 - 권한만 회수하고 싶은 경우 (REVOKE)
 
-사용자 계정은 유지하되, 특정 데이터베이스(예: `testdb`)에 대한 권한만 뺏고 싶을 때 사용합니다.
+사용자 계정은 유지하되, 특정 데이터베이스(예: `testdb`)에 대한 권한만 뺏고 싶을 때 사용합니다.
 
 ```sql
 REVOKE ALL PRIVILEGES ON testdb.* FROM 'username'@'localhost';
@@ -216,13 +195,13 @@ FLUSH PRIVILEGES;
 SELECT User, Host FROM mysql.user;
 ```
 
-**주의:** 사용자 삭제 작업은 반드시 `root` 계정이나 그에 준하는 관리자 권한이 있는 계정으로 접속해서 수행해야 합니다.
+**주의:** 사용자 삭제 작업은 반드시 `root` 계정이나 그에 준하는 관리자 권한이 있는 계정으로 접속해서 수행해야 합니다.
 
 ## 6.3 데이터베이스에 등록된 사용자 보기
 
-현재 MariaDB 서버에 생성된 모든 사용자 목록을 확인하려면 `mysql` 시스템 데이터베이스의 `user` 테이블을 조회하면 됩니다.
+현재 MariaDB 서버에 생성된 모든 사용자 목록을 확인하려면 `mysql` 시스템 데이터베이스의 `user` 테이블을 조회하면 됩니다.
 
-이 작업도 **root 계정**으로 접속한 상태에서 수행해야 합니다.
+이 작업도 **root 계정**으로 접속한 상태에서 수행해야 합니다.
 
 ```sql
 -- 사용자명과 접속 허용 호스트 확인
@@ -235,7 +214,7 @@ SELECT User, Host FROM mysql.user;
 SELECT * FROM mysql.user\G
 ```
 
-*(끝에 `\G`를 붙이면 결과를 가로가 아닌 세로 형태로 보기 편하게 출력해 줍니다.)*
+*(끝에 `\G`를 붙이면 결과를 가로가 아닌 세로 형태로 보기 편하게 출력해 줍니다.)*
 
 ---
 
