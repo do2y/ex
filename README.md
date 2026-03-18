@@ -1,4 +1,4 @@
-## 자재 관리 시스템 (Material Management)
+## 📦 자재 관리 시스템 (Material Management)
 ### 프로젝트 소개
 
 > 자재 정보를 등록, 조회, 수정, 삭제할 수 있는 간단한 자재 관리 웹 서비스입니다.
